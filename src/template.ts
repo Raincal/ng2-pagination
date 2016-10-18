@@ -14,9 +14,9 @@ export const DEFAULT_TEMPLATE = `
 
         <li class="pagination-previous" [class.disabled]="isFirstPage()" *ngIf="directionLinks"> 
             <a *ngIf="1 < getCurrent()" (click)="previous()" aria-label="Next page">
-                Previous <span class="show-for-sr">page</span>
+                上一页 <span class="show-for-sr">page</span>
             </a>
-            <span *ngIf="isFirstPage()">Previous <span class="show-for-sr">page</span></span>
+            <span *ngIf="isFirstPage()">上一页 <span class="show-for-sr">page</span></span>
         </li>
 
         <li [class.current]="getCurrent() === page.value" *ngFor="let page of pages">
@@ -32,9 +32,9 @@ export const DEFAULT_TEMPLATE = `
 
         <li class="pagination-next" [class.disabled]="isLastPage()" *ngIf="directionLinks">
             <a *ngIf="!isLastPage()" (click)="next()" aria-label="Next page">
-                Next <span class="show-for-sr">page</span>
+                下一页 <span class="show-for-sr">page</span>
             </a>
-            <span *ngIf="isLastPage()">Next <span class="show-for-sr">page</span></span>
+            <span *ngIf="isLastPage()">下一页 <span class="show-for-sr">page</span></span>
         </li>
 
     </ul>
